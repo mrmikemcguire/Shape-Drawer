@@ -48,21 +48,21 @@ public class ShapeDrawer extends Canvas
 				"Shape Choice",
 				JOptionPane.YES_NO_CANCEL_OPTION,
 				JOptionPane.QUESTION_MESSAGE,
-				null, optionsThree, optionsThree[1]);	
+				null, optionsThree, optionsThree[0]);	
 		
 		Object[] optionsOne = {"White", "Black", "Yellow"};
 		backgroundColor = JOptionPane.showOptionDialog(frame, "What color do you want the background to be?",
 				"Background Color Choice",
 				JOptionPane.YES_NO_CANCEL_OPTION,
 				JOptionPane.QUESTION_MESSAGE,
-				null, optionsOne, optionsOne[2]);
+				null, optionsOne, optionsOne[0]);
 		
 		Object[] optionsTwo = {"Blue", "Red", "Green", "Yellow", "Black", "White"};
 		shapeColor = JOptionPane.showOptionDialog(frame, "What color do you want the shape to be?",
 				"Shape Color Choice",
 				JOptionPane.YES_NO_CANCEL_OPTION,
 				JOptionPane.QUESTION_MESSAGE,
-				null, optionsTwo, optionsTwo[2]);
+				null, optionsTwo, optionsTwo[0]);
 	    }
 		   
 	
