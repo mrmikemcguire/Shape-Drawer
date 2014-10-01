@@ -1,20 +1,20 @@
 import java.awt.*;
-import java.util.Scanner;
-
 import javax.swing.*; 
 
-public class Drawer extends Canvas 	
+public class ShapeDrawer extends Canvas 	
 	{	
 	private static final long	serialVersionUID = 1L;     	
-	public static int chosenWidth, chosenLength, i = 0, x = 0, y = 0, z = 0;
-	public static String chosenColor;
+	static int shape; 
+	static int shapeColor;
+	static int backgroundColor;
+	static JFrame frame = new JFrame();
 	
 	public static void main(String[] args)     		
 		{	     
-		Questions.askQuestions();
-		Drawer canvas = new Drawer();
+		askQuestions();
+		ShapeDrawer canvas = new ShapeDrawer();
 		
-		switch(Questions.backgroundColor)
+		switch(backgroundColor)
 			{
 			case 0:
 				{
@@ -40,11 +40,35 @@ public class Drawer extends Canvas
 			frame.setVisible(true);	
 			frame.setLocationRelativeTo(null);
 		}
+	
+	public static void askQuestions()
+	    {
+		Object[] optionsThree = {"Square", "Circle"};
+		shape = JOptionPane.showOptionDialog(frame, "What shape do you want to draw?",
+				"Shape Choice",
+				JOptionPane.YES_NO_CANCEL_OPTION,
+				JOptionPane.QUESTION_MESSAGE,
+				null, optionsThree, optionsThree[1]);	
+		
+		Object[] optionsOne = {"White", "Black", "Yellow"};
+		backgroundColor = JOptionPane.showOptionDialog(frame, "What color do you want the background to be?",
+				"Background Color Choice",
+				JOptionPane.YES_NO_CANCEL_OPTION,
+				JOptionPane.QUESTION_MESSAGE,
+				null, optionsOne, optionsOne[2]);
+		
+		Object[] optionsTwo = {"Blue", "Red", "Green", "Yellow", "Black", "White"};
+		shapeColor = JOptionPane.showOptionDialog(frame, "What color do you want the shape to be?",
+				"Shape Color Choice",
+				JOptionPane.YES_NO_CANCEL_OPTION,
+				JOptionPane.QUESTION_MESSAGE,
+				null, optionsTwo, optionsTwo[2]);
+	    }
 		   
 	
 	public void paint(Graphics graphics) 	
 		{
-		switch(Questions.shapeColor)
+		switch(shapeColor)
 			{
 			case 0:
 				{
@@ -78,7 +102,7 @@ public class Drawer extends Canvas
 				}
 			}
 		
-		switch(Questions.shape)
+		switch(shape)
 			{
 			case 0:
 				{
