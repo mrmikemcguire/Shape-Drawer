@@ -18,11 +18,9 @@ public class ShapeDrawerDD extends Canvas
 		askQuestions();
 		canvas = new ShapeDrawerDD();
 			
-		//JFrame frame = new JFrame();	       
 		frame.setSize(400, 400);	       
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	     
 		frame.getContentPane().add(canvas);	        
-		//frame.setVisible(true);	
 		frame.setLocationRelativeTo(null);
 		}
 	
@@ -49,26 +47,7 @@ public class ShapeDrawerDD extends Canvas
 	
 	public static void askQuestions()
 	    {
-		/*Object[] optionsThree = {"Square", "Circle"};
-		shape = JOptionPane.showOptionDialog(frame, "What shape do you want to draw?",
-				"Shape Choice",
-				JOptionPane.YES_NO_CANCEL_OPTION,
-				JOptionPane.QUESTION_MESSAGE,
-				null, optionsThree, optionsThree[0]);
-		
-		Object[] optionsOne = {"White", "Black", "Yellow"};
-		backgroundColor = JOptionPane.showOptionDialog(frame, "What color do you want the background to be?",
-				"Background Color Choice",
-				JOptionPane.YES_NO_CANCEL_OPTION,
-				JOptionPane.QUESTION_MESSAGE,
-				null, optionsOne, optionsOne[0]);
-		
-		Object[] optionsTwo = {"Blue", "Red", "Green", "Yellow", "Black", "White"};
-		shapeColor = JOptionPane.showOptionDialog(frame, "What color do you want the shape to be?",
-				"Shape Color Choice",
-				JOptionPane.YES_NO_CANCEL_OPTION,
-				JOptionPane.QUESTION_MESSAGE,
-				null, optionsTwo, optionsTwo[0]);*/
+	
 	    String[] shapeOptions = {"Square", "Circle"};
 	    JLabel shapeLabel = new JLabel("Choose Shape");
 		final JComboBox<String> shapeDropdown = new JComboBox<String>(shapeOptions);
